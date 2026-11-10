@@ -1,0 +1,175 @@
+.cfloat-admin {
+	max-width: 1100px;
+}
+
+.cfloat-admin-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+	margin-top: 16px;
+}
+
+@media (max-width: 960px) {
+	.cfloat-admin-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+.cfloat-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 16px 20px 8px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+	margin: 16px 0;
+}
+
+.cfloat-card h2 {
+	margin: 0 0 8px;
+	font-size: 1.15rem;
+}
+
+.cfloat-card__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 4px;
+}
+
+.cfloat-card__head h2 {
+	margin: 0;
+}
+
+.cfloat-card--items {
+	padding-bottom: 16px;
+}
+
+.cfloat-items {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.cfloat-item-row {
+	display: grid;
+	grid-template-columns: 28px 48px 1fr 36px;
+	gap: 12px;
+	align-items: start;
+	padding: 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: #f6f7f7;
+}
+
+.cfloat-item-row.is-disabled {
+	opacity: 0.55;
+}
+
+.cfloat-item-row.is-dragging {
+	opacity: 0.5;
+	border-style: dashed;
+}
+
+.cfloat-item-row__handle {
+	cursor: grab;
+	color: #787c82;
+	padding-top: 10px;
+	user-select: none;
+}
+
+.cfloat-item-row__preview {
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+}
+
+.cfloat-item-row__preview svg {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
+
+.cfloat-item-row__preview img {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+}
+
+.cfloat-item-row__fields {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 8px 12px;
+}
+
+.cfloat-field {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	margin: 0;
+}
+
+.cfloat-field > span {
+	font-size: 12px;
+	color: #50575e;
+}
+
+.cfloat-field input[type="text"],
+.cfloat-field input[type="url"],
+.cfloat-field select,
+.cfloat-field textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
+.cfloat-field--color input[type="color"] {
+	width: 48px;
+	height: 32px;
+	padding: 0;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.cfloat-field--wide {
+	grid-column: 1 / -1;
+}
+
+.cfloat-field--toggle {
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	padding-top: 18px;
+}
+
+.cfloat-item-row__remove {
+	color: #b32d2e !important;
+	padding-top: 10px;
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+.cfloat-help code {
+	display: inline-block;
+	padding: 6px 10px;
+	background: #f0f0f1;
+	border-radius: 4px;
+}
+
+@media (max-width: 782px) {
+	.cfloat-item-row {
+		grid-template-columns: 24px 40px 1fr 28px;
+	}
+
+	.cfloat-item-row__fields {
+		grid-template-columns: 1fr;
+	}
+}
